@@ -2,7 +2,7 @@
 let topics = ["swim","run","jump","glide","sit","talk"];
 const apiKey = "nSYAjwmjaYmqnTuJHqRejr13snhO8ONY";
 let search="";
-let queryURL = "http://api.giphy.com/v1/gifs/search?"
+let queryURL = "";
 createButtons();
 
 
@@ -51,7 +51,7 @@ $(document).on("click",".search-gifs", function(){
     $("main").empty();
     search = $(this).attr("data-name");
     console.log(search);
-    queryURL = "http://api.giphy.com/v1/gifs/search?"+"q="+search+"&api_key="+apiKey+"&limit=10";
+    queryURL = "https://api.giphy.com/v1/gifs/search?"+"q="+search+"&api_key="+apiKey+"&limit=10";
     
     addGifs();
 
@@ -62,7 +62,7 @@ $(document).on("click",".search-gifs", function(){
 $(document).on("click","#add-ten",function(){
     
     event.preventDefault();
-    queryURL = "http://api.giphy.com/v1/gifs/search?"+"q="+search+"&api_key="+apiKey+"&limit=10"+"&offset=10"
+    queryURL = "https://api.giphy.com/v1/gifs/search?"+"q="+search+"&api_key="+apiKey+"&limit=10"+"&offset=10"
     addGifs();
 });
 
