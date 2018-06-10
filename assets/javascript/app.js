@@ -1,4 +1,4 @@
-// let urlQuery = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5"
+
 let topics = ["swim","run","jump","glide","sit","talk"];
 const apiKey = "nSYAjwmjaYmqnTuJHqRejr13snhO8ONY";
 let search="";
@@ -9,10 +9,10 @@ createButtons();
 function createButtons(){
     for(i=0; i<topics.length; i++){
         let newButton =$("<button>")
-        .addClass("search-gifs")
+        .addClass("search-gifs waves-effect waves-light btn")
         .attr("data-name",topics[i])
         .text(topics[i]);
-        $("nav").append(newButton);
+        $("#topic-buttons").append(newButton);
     };
 };
 
@@ -56,7 +56,7 @@ $(document).on("click",".search-gifs", function(){
     addGifs();
 
     
-    $("main").prepend("<button id='add-ten'> + 10 gifs</button>");
+    $("main").prepend("<button id='add-ten' class='btn-large #9575cd deep-purple lighten-2'>+ 10 gifs</button>");
 });
 
 $(document).on("click","#add-ten",function(){
