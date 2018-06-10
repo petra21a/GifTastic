@@ -37,7 +37,7 @@ function addGifs(){
 
 $("#add-topic").on("click", function(){
     event.preventDefault();
-    $("nav").empty();
+    $("#topic-buttons").empty();
     let newTopic = $("#new-topic").val().trim();
     if(newTopic!==""){
         topics.push(newTopic);
